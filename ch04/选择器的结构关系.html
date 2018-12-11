@@ -1,0 +1,65 @@
+<!--
+Created by JetBrains WebStorm.
+User: 59120
+Date: 2018/11/28
+Time: 21:24
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <style type="text/css">
+        .grandfather{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .father{
+            width: 150px;
+            height: 150px;
+            background-color: green;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background-color: aliceblue;
+        }
+
+        /*.father.son[]{*/
+            /*background-color: blue;*/
+        /*}*/
+
+        .father .son1 + div{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<!--
+    因为标签有不同的结构，所以选择器也有对应的表示方法
+    并列（兄弟）关系            嵌套（父子）关系
+    1、包含选择器（后代选择器） 可以选择某个元素包含的某些后代元素，可以跨越多级
+        例:     .father .son
+    2、子级选择器（子元素选择器） 只能选择直接的子级元素，不能跨越多级
+        例：     .father .son  但是.grandfather .son 就不行
+    3、群组选择器（选择器分组） 将多个不同的选择器分到一组，添加共同的样式
+        例：     .son1, .son2, .son3
+    4、复合选择器  需要标签同时满足两个选择器选择的条件才能被选择,其中第一必须是标记选择器，第二个必须是类别选择器或者ID选择器，两个选择器之间不能有空格，必须连续书写
+
+    5、毗邻选择器  选择某个元素紧挨着的下一个兄弟元素
+        例：      .father .son1 + .son2
+-->
+</body>
+
+<div class="grandfather">
+    <div class="father">
+        <div class="son1 son"></div>
+        <div class="son2 son"></div>
+        <div class="son3 son"></div>
+        <div class="son4 son"></div>
+    </div>
+</div>
+</html>

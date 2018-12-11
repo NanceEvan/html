@@ -1,0 +1,123 @@
+<!--
+  Created by JetBrains WebStorm.
+  Auther: Sizer
+-->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <style type="text/css">
+        /*--default style start--*/
+        *{margin: 0; padding: 0;}
+        body{background-color: #f5f5f5;font-family: "Microsoft YaHei",SimSun,'\5b8b\4f53',sans-serif;}
+        /*一定要把a的字体颜色设置成从父级继承*/
+        a{text-decoration: none;color: inherit;}
+        /*圆边*/
+        .boder-rad10{border-radius: 10px;}
+        /*边框阴影*/
+        .shadow{box-shadow: -5px 5px 10px rgba(0,0,0,.2);}
+        /*--default style end--*/
+
+        .wrap{width: 1240px;margin: 100px auto;font-size: 0;}
+        /*上方标题*/
+        .title{display: block;height: 105px;background: url("http://img.alicdn.com/tfs/TB1QJdItNjaK1RjSZKzXXXVwXXa-600-130.png")
+                                no-repeat center/300px 65px;}
+        /*两列结构*/
+        .wall-item{display: inline-block;width: 610px;height: 330px;margin-left: 20px;vertical-align: middle;}
+        .wall-item > div{display: inline-block;vertical-align: middle;}
+
+        /*各模块背景及字体颜色*/
+        .d1p1{color: #8300ff;background-image: url(//img.alicdn.com/tfs/TB1n9NjtIbpK1RjSZFyXXX_qFXa-350-160.png);}
+        .d1p2{color: #009d66;background-image: url(//img.alicdn.com/tfs/TB1qhRjtNTpK1RjSZFKXXa2wXXa-350-160.png);}
+        .d2p1{color: #005aff;background-image: url(//img.alicdn.com/tfs/TB1aQdrtMHqK1RjSZFEXXcGMXXa-350-160.png);}
+        .d2p2{color: #ff6684;background-image: url(//img.alicdn.com/tfs/TB1vSNitSzqK1RjSZFjXXblCFXa-350-160.png);}
+        .s1{color: #ff0e3c;background-image: url(//img.alicdn.com/tfs/TB1qhJotMHqK1RjSZFkXXX.WFXa-250-330.png);}
+        .s2{color: #ff520c;background-image: url(//img.alicdn.com/tfs/TB1qRFgtSzqK1RjSZPcXXbTepXa-250-330.png);}
+        /*!*继承模式有变，敌方有诈*!*/
+        /*.s1 a{color: inherit;}*/
+        /*!*继承模式有变，敌方有诈*!*/
+        /*.s2 a{color: inherit;}*/
+
+        /*单行图片样式*/
+        .wrap-single-img a{display: block;width: 250px;height: 330px;text-align: center;}
+        .wrap-single-img span{display: block;font-size: 24px;font-weight: 800;}
+        .wrap-single-img .s-img-title{padding-top: 32px;}
+        .wrap-single-img .s-img-sm-title{font-size: 18px;font-weight: 500;}
+        .wrap-single-img img{display: block;width: 180px;height: 180px;margin: 30px auto;}
+        /*双行图片样式*/
+        .wrap-double-img{width: 350px;height: 330px;margin-left: 10px;}
+        .wrap-double-img a{display: block;width: 100%;height: 160px;margin-top: 10px;}
+        .wrap-double-img a > div{margin-left: 30px;width: 175px;display: inline-block;vertical-align: baseline;}
+        .wrap-double-img span{display: block;}
+        .wrap-double-img .d-img-title{font-size: 24px;font-weight: 700;padding-top: 27px;}
+        .wrap-double-img .d-img-sm-title{font-size: 18px;}
+        .wrap-double-img img{display: inline-block;vertical-align: middle;width: 130px;height: 130px;}
+
+
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <a href="" class="title"></a>
+    <div class="img-wall">
+        <div class="wall-item" style="margin-left: 0;">
+            <div class="wrap-single-img s1 shadow">
+                <a href="" class="boder-rad10">
+                    <div>
+                        <span class="s-img-title">美家会场</span>
+                        <span class="s-img-sm-title">满额立减</span>
+                    </div>
+                    <img src="https://img.alicdn.com/bao/uploaded/TB1H3UMg4naK1RjSZFtwu2C2VXa.png_250x250q90.jpg" alt="">
+                </a>
+            </div>
+            <div class="wrap-double-img">
+                <a href="" style="margin-top: 0;" class="boder-rad10 d1p1 shadow">
+                    <div>
+                        <span class="d-img-title">百货会场</span>
+                        <span class="d-img-sm-title">满199减100</span>
+                    </div>
+                    <img src="https://img.alicdn.com/bao/uploaded/TB1O7B8dxTpK1RjSZFGwu3HqFXa.png_160x160q90.jpg" alt="">
+                </a>
+                <a href="" class="boder-rad10 d1p2 shadow">
+                    <div>
+                        <span class="d-img-title">内衣精选</span>
+                        <span class="d-img-sm-title">抢50元大额券</span>
+                    </div>
+                    <img src="https:////img.alicdn.com/bao/uploaded/TB17lpfuHvpK1RjSZPiXXbmwXXa.png_160x160q90.jpg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="wall-item">
+            <div class="wrap-single-img s2 shadow">
+                <a href="" class="boder-rad10">
+                    <div>
+                        <span class="s-img-title">灯具电工</span>
+                        <span class="s-img-sm-title">满1000减140</span>
+                    </div>
+                    <img src="https://img.alicdn.com/bao/uploaded/TB1v2Z6kBjTBKNjSZFDwu2VgVXa.png_250x250q90.jpg" alt="">
+                </a>
+            </div>
+            <div class="wrap-double-img">
+                <a href="" style="margin-top: 0;" class="boder-rad10 d2p1 shadow">
+                    <div>
+                        <span class="d-img-title">内衣精选</span>
+                        <span class="d-img-sm-title">抢50元大额券</span>
+                    </div>
+                    <img src="https://img.alicdn.com/bao/uploaded/TB1O7B8dxTpK1RjSZFGwu3HqFXa.png_160x160q90.jpg" alt="">
+                </a>
+                <a href="" class="boder-rad10 d2p2 shadow">
+                    <div>
+                        <span class="d-img-title">内衣会场</span>
+                        <span class="d-img-sm-title">满300减30</span>
+                    </div>
+                    <img src="https:////img.alicdn.com/bao/uploaded/TB17lpfuHvpK1RjSZPiXXbmwXXa.png_160x160q90.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

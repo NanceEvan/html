@@ -1,0 +1,80 @@
+<!--
+  Created by JetBrains WebStorm.
+  Auther: Sizer
+-->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <style type="text/css">
+        /*
+
+        在p元素是不能嵌套Div元素的，它会被浏览器解析为页面中p元素的两倍数量，也就是开始标签被解析为一个p元素，结束标签被解析为一个p元素。
+            |- 文本水平对齐方式：text-align： 设置字体水平对齐方式（设置该元素内容的水平对齐方式）
+                                           值：
+                                                left（左对齐、默认值）
+                                                right（右对齐）
+                                                center（居中对齐）
+            |- 文本修饰： text-decoration： 修饰文本
+                                            值：
+                                                none(无修饰)
+                                                underline（下划线）
+                                                overline（上划线）
+                                                line-through（删除线）
+            |- 首行缩进： text-indent： 设置首行文本的缩进距离
+                                            值：
+                                                px: 固定像素值
+                                                em: 1em=当前元素的字体大小
+            |- 文本溢出处理： text-overflow： 文本超出元素的时候的处理方法（只是规定横向超出的处理方式）
+                                            值：
+                                                clip（超出裁剪）
+                                                ellipsis（超出出现省略号）
+                                            注： ！！！使用时要配合使用：！！！
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                                white-space: nowrap;
+            |- 文本字母处理： text-transform: 设置文本字母的处理方式
+                                            值：
+                                                none(正常显示)
+                                                capitalize(单词首字母大写)
+                                                uppercase(全部大写)
+                                                lowercase(全部小写)
+            |- 字间距： letter-spacing： 设置字体与字体之间的间距（字母与字母之间，汉字与汉字之间）
+                                            值：
+                                                px： 固定像素值
+                                                em： 1em = 当前元素的字体大小
+            |- 词间距： word-spacing： 设置单词与单词之间的间距(只对英文生效)
+                                            值：
+                                                px： 固定像素值
+                                                em： 1em = 当前元素的字体大小
+            |- 文本换行方式： white-space： 设置当文本即将换行时的处理
+                                            值：
+                                                nowrap(只有遇到<br>才会换行)
+                                                normal(默认换行方式)
+                                                pre(保留空格、缩进、换行，但是文本不会自动换行)
+                                                pre-line(合并空格、缩进、保留换行，文本自动换行)
+                                                pre-wrap(保留空格、缩进、换行、并且文本自动换行)
+            |- 单词换行方式： word-break： 设置单词内需要换行时的处理方式
+                                            值：
+                                                break-all 允许在单词内换行
+                                                normal 默认换行方式
+                                                keep-all 不允许单词内换行
+         */
+        div{
+            word-spacing: 3em;
+            letter-spacing: 3em;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box1">
+    <p>一声已动物皆静</p>
+    <p>this is a test</p>
+    <p>&nbsp;</p>
+</div>
+</body>
+</html>

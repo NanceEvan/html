@@ -1,0 +1,127 @@
+/**
+*
+*@Author Sizer
+*
+*/
+/*设置默认样式 start*/
+/* 清除内外边距 */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+fieldset, lengend, button, input, textarea, /* form elements 表单元素 */
+th, td { /* table elements 表格元素 */
+    margin: 0;
+    padding: 0;
+}
+/*设置默认背景颜色*/
+body{
+    background-color: #f5f5f5;
+}
+/* 设置默认字体 */
+body,
+button, input, select, textarea { /* for ie */
+    /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+    font: 12px/1.5 tahoma, arial, "\5b8b\4"; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+}
+h1 { font-size: 18px; /* 18px / 12px = 1.5 */ }
+h2 { font-size: 16px; }
+h3 { font-size: 14px; }
+h4, h5, h6 { font-size: 100%; }
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+/* 重置列表元素 */
+ul, ol { list-style: none; }
+/* 重置文本格式元素 */
+a { text-decoration: none; }
+a:hover { text-decoration: none; }
+/* 重置 hr */
+hr {
+    border: none;
+    height: 1px;
+}
+/*设置默认样式 end*/
+
+
+
+/*task one start*/
+.wrap{
+    margin: 100px auto;
+    width: 1270px;
+    font-size: 0;
+    padding-top: 24px;
+    padding-right: 30px;
+}
+.brand_item{
+    height: 370px;
+    /*background-color: red;*/
+    margin-right: 13px;
+    display: inline-block;
+}
+.item_head{
+    height: 54px;
+    background: #fff;
+    font-size: 0;
+    border-style: solid;
+    border-width: 0 0 1px;
+    border-color: #eee;
+    position: relative;
+}
+.item_head .cn{
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    line-height: 54px;
+    height: 18px;
+    margin-left: 10px;
+}
+.item_head .en{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+    margin-left: 10px;
+    line-height: 24px;
+    height: 44px;
+}
+.small_icon{
+    position: absolute;
+    right: 14px;
+    top: 0;
+    width: 42px;
+    height: 54px;
+    line-height: 54px;
+
+    padding-right: 14px;
+    font-size: 16px;
+    color: #666;
+
+    background-size: 18px 18px;
+    background-image: url(../images/allow_icon.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+.brand_item .gimg_body img {
+    display: block;
+    height: 316px;
+    width: 100%;
+}
+
+
+/*悬浮透明*/
+.gimg_body:hover img{
+    opacity: .7;
+}
+/*task one end*/
+
+
+/*task two start*/
+.small_title img{
+    vertical-align: middle;
+    width: 214px;
+    height: 25px;
+}
+
+
+/*task two end*/

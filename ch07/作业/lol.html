@@ -1,0 +1,214 @@
+<!--
+  Created by JetBrains WebStorm.
+  Auther: Sizer
+-->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <style type="text/css">
+        /*--default style start--*/
+        *{margin: 0; padding: 0;}
+        a{text-decoration: none;}
+        ul{list-style: none;}
+        body{    font: 12px/1.5 tahoma,'\5FAE\8F6F\96C5\9ED1',sans-serif;}
+        /*--default style end--*/
+
+        .contain{
+            width: 1358px;
+            margin: 100px auto;
+            /*要不要加高度？*/
+        }
+        .top-tit{font-size: 0;}
+        .top-tit h2::before{
+            content: '\0020';
+            display: inline-block;
+            width: 4px;
+            height: 28px;
+            background-color: #1da6ba;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .top-tit h2{
+            height: 28px;
+            color: #0b0b0b;
+            font-size: 24px;
+            line-height: 28px;
+            font-weight: 400;
+        }
+        .content{
+            width: 840px;
+            font-size: 0;
+        }
+        .fa-row{
+            margin-top: 21px;
+        }
+        .fa-row li{
+            display: inline-block;
+            overflow: hidden;
+            margin-left: 20px;
+        }
+        .fa-row li:first-of-type{
+            margin-left: 0;
+        }
+
+        .fa-image{
+            display: inline-block;
+            width: 192px;
+            height: 192px;
+            background: red url("http://shp.qpic.cn/cms_pic/1329041464/42f20227dfcbf2f9a5d22889ea0c1ac9/258") no-repeat center/192px;
+        }
+        .hover-tit{
+            display: inline-block;
+            box-sizing: border-box;
+            width: 100%;
+            height: 70px;
+            padding: 0 8px 6px 10px;
+            background-color: rgba(28,28,28,.8);
+            vertical-align: bottom;
+            position: relative;
+            bottom: -100%;
+        }
+        .fa-image::before{
+            content: '';
+            height: 100%;
+            display: inline-block;
+            font-size: 0;
+            vertical-align: bottom;
+        }
+        /*--hover title's content style--*/
+        .p1{
+            width: 100%;
+            line-height: 24px;
+            font-size: 12px;
+            text-align: left;
+            padding: 8px 0 8px 2px;
+            box-sizing: border-box;;
+        }
+        .p1>a{
+            color: #fff;
+        }
+        .p2{font-size: 8px; color: #f2f2f2;}
+        /*--hover animation start--*/
+        .fa-image:hover{
+            -webkit-animation: fa-zoom-min .3s ease-in;
+            animation-fill-mode:forwards;
+        }
+        /*.fa-image{*/
+            /*-webkit-animation: fa-zoom-mout .3s ease-in;*/
+            /*animation-fill-mode:forwards;*/
+        /*}*/
+        .fa-image:hover .hover-tit{
+            -webkit-animation: fa-hover .1s ease-out;
+            animation-fill-mode:forwards;
+        }
+        /*--hover animation end--*/
+        /*--Animation start--*/
+        /*--fanart zoom start--*/
+        /*鼠标移入*/
+        @-webkit-keyframes fa-zoom-min {
+            from {background-size: 192px;}
+            to{background-size: 250px;}
+        }
+        /*鼠标移出   显然这种方案是错的*/
+        /*@-webkit-keyframes fa-zoom-mout {*/
+            /*from{background-size: 250px;}*/
+            /*to {background-size: 192px;}*/
+        /*}*/
+        /*fanart zoom end*/
+        /*hover title start*/
+        @-webkit-keyframes fa-hover {
+            from{}
+            to{position:relative; bottom: 0;}
+        }
+        /*hover title end*/
+        /*Animation end*/
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <!--模块标题-->
+        <div class="top-tit">
+            <h2>FANART创作馆</h2>
+        </div>
+        <div class="fa-wall">
+
+            <!--模块内容-->
+            <div class="content">
+                <!--左侧作品展示框-->
+                <ul class="fa-row">
+                    <li>
+                        <div class="fa-image">
+                            <div class="hover-tit">
+                                <h4 class="p1"><a href="#">我是谁？</a></h4>
+                                <p class="p2">我在哪？</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fa-image">
+                            <div class="hover-tit">
+                                <h4 class="p1"><a href="#">我是谁？</a></h4>
+                                <p class="p2">我在哪？</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fa-image">
+                            <div class="hover-tit">
+                                <h4 class="p1"><a href="#">我是谁？</a></h4>
+                                <p class="p2">我在哪？</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fa-image">
+                            <div class="hover-tit">
+                                <h4 class="p1"><a href="#">我是谁？</a></h4>
+                                <p class="p2">我在哪？</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="fa-row">
+                    <li>
+                        <div class="fa-image">
+                            <div class="hover-tit">
+                                <h4 class="p1"><a href="#">我是谁？</a></h4>
+                                <p class="p2">我在哪？</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fa-image">
+                            <div class="hover-tit">
+                                <h4 class="p1"><a href="#">我是谁？</a></h4>
+                                <p class="p2">我在哪？</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fa-image">
+                            <div class="hover-tit">
+                                <h4 class="p1"><a href="#">我是谁？</a></h4>
+                                <p class="p2">我在哪？</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fa-image">
+                            <div class="hover-tit">
+                                <h4 class="p1"><a href="#">我是谁？</a></h4>
+                                <p class="p2">我在哪？</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!--
+  Created by JetBrains WebStorm.
+  User: Sizer
+-->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <style type="text/css">
+        div{
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+        }
+        .box1{
+            background: red;
+        }
+        .box2{
+            background-color: blue;
+            /*display: none;*/
+
+        }
+        .box3{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<!--
+    通过css中的display属性，我们可以把元素的特性进行转换，但是转换的仅仅是标签的特性，行级标签仍然是行级标签，块级标签仍然是块级标签
+    1、块级特性
+        a{display:block;}
+    2、行内特性
+        div{displau:inline;}
+    3、不显示元素
+        div{display:none;}
+            不显示元素display:none与visibility的对比
+                调试工具都能够检查到元素
+                display:none设置的元素将从界面完全消失，不会留下一点痕迹
+                biciblity设置的元素只是隐藏了起来，主要表现在依然占据原有的位置
+-->
+</body>
+<style>
+    .box1:hover+.box2 {
+        display: none;
+    }
+
+</style>
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+</html>

@@ -1,0 +1,42 @@
+<!--
+  Created by JetBrains WebStorm.
+  User: Sizer
+-->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <style type="text/css">
+        a{
+            color: red;
+        }
+        a::before{
+            content: 'before';
+            /*color: blue;*/
+        }
+        a::after{
+            content: 'after';
+            /*color: green;*/
+        }
+    </style>
+</head>
+<body>
+<!--
+    伪类元素（::）
+        伪类元素，与普通的标签元素类似，但是并不是直接写在body之中，而是依托于选择器添加，并且这些元素有特殊的特性
+        1、元素前面插入内容
+            a::before{content:"插入到前面的文字";}
+        2、元素后面插入内容
+            a::after{content:"插入到后面的文字";}
+        注意事项：
+            1、content为必须的属性且格式必须完整
+            2、其解析出的效果基本等同于写入一个标签（使用伪类的元素的样式可以影响伪类元素，但是伪类元素不影响使用伪类的元素）
+            3、{}中所有属性都是为伪类元素添加不影响使用伪类的元素
+            4、after常用于清楚浮动时使用
+-->
+<a href="#">this is a test</a>
+</body>
+</html>

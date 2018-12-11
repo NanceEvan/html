@@ -1,0 +1,87 @@
+<!--
+  Created by JetBrains WebStorm.
+  User: Sizer
+-->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <style type="text/css">
+        span{
+            background-color: red;
+            padding: 20px;
+            margin: 100px;
+        }
+        strong{
+            background-color: red;
+            padding: 20px;
+            margin: 100px;
+        }
+        .fuz{
+            background-color: yellow;
+            height: 100px;
+        }
+        .b_box{
+            width: 100%;
+            height: 100px;
+            margin-left: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<!--
+    行级标签的特性
+        常见的行级标签 <a> <span> <strong> <b> <em> <i>
+        1、排列特性  可以和其他标签在同一行排列
+        2、宽高特性  不支持设置宽高、宽高均由内容撑开
+        3、边距特性  左右外边距有距离，上下外边距没有显示效果
+                   上下内外边距可以设置生效，但是无法作用于其他元素
+                   只是有这么个效果，实际上是没有
+        4、换行间距  标签之间的换行会被解析为空格
+                    解决方法：
+                        写代码时不要换行，在一行书写
+                        给父级元素设置字体大小为0，缺点是要给子元素另外设置字体大小
+                        设置margin-left为-3px 缺点是如果用到js拼接字符会导致格式错误
+
+    块级标签的特性
+        常见的块级标签  <div> <p> <ul> <li> <h> <dl> <dt> <dd>
+        1、排列特性 单独占据一行的位置
+        2、宽高特性 可以设置宽高，高度由内容或者字体行高撑开，高度默认为auto（但是不是100%，如果是100%会导致窗口缩小之后显示不全，有滚动条;
+                                    如果是100%的话，如果设置该块级元素margin-left的话，这时的宽度是一个固定的父级的宽度，这个时候会导致排版错误）
+        3、边距特性 支持内外边距，并且正常生效
+    行块标签：
+        常见的行块级元素 img, input, select
+        样式： display:inline-block
+        行块级标签的问题：
+            1、不兼容ie7-低版本
+            2、对齐方式手vertical-align属性的影响
+            3、航块元素中没有文字内容时，基线为元素底部，有文字内容时为文字内容的底部
+        1、可以和其他元素在同一行排列,一行无法方法的元素将在下一行开始排列
+        2、宽高特性：可以设置宽高，宽高默认由内容或者字体行高撑开
+        3、边距特性： 支持设置内外边距，并且正常生效
+        4、标签之间的换行会被解析为空格
+        5、对齐方式
+            航快元素的位置会受到text-align文本对其方式的影响
+-->
+<span>我是span</span><strong>我是strong</strong>
+<div class="fuz"></div>
+<div class="b_box"></div>
+
+<style>
+    img{
+        background-color: red;
+        margin: 10px;
+        padding: 10px;
+    }
+</style>
+<img src="image.jpg" alt="">
+<img src="image.jpg" alt="">
+<img src="image.jpg" alt="">
+<img src="image.jpg" alt="">
+<img src="image.jpg" alt="">
+</body>
+</html>

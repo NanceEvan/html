@@ -1,0 +1,330 @@
+<!--
+  Created by JetBrains WebStorm.
+  Auther: Sizer
+-->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <style type="text/css">
+        /*清楚浮动*/
+        .clearfix:before,
+        .clearfix:after {
+            content: ".";
+            display: block;
+            height: 0;
+            visibility: hidden;
+        }
+        .clearfix:after {clear: both;}
+        .clearfix {zoom: 1;}
+        *{margin: 0; padding: 0;}
+        a{text-decoration: none;: none; color: inherit;}
+        body{
+            width: 1827px;
+            color: #111;
+            background: #fff;
+            font: 0 Helvetica,Arial,sans-serif;
+            line-height: 1.62;
+        }
+        ul{list-style: none;}
+        .wrap{
+            width: 1040px;
+            margin: 0 auto;
+        }
+        .nav{
+            background-color: #f0f3f5;
+        }
+        /*头部菜单包裹*/
+        .nav-wrap{
+            width: 1040px;
+            margin: 0 auto;
+        }
+        /*第一行菜单*/
+        .nav-primary{
+            border-bottom: 1px solid #e5ebe4;
+        }
+        /*logo*/
+        .nav-logo{
+            display: inline-block;
+            width: 200px;
+            height: 56px;
+            padding-bottom: 10px;
+            font-size: 34px;
+            font-weight: 900;
+            overflow: hidden;
+            line-height: 2em;
+            color: #27a;
+            vertical-align: middle;
+        }
+        /*搜索框*/
+        .nav-search{
+            width: 524px;
+            display: inline-block;
+            margin-left: 312px;
+            vertical-align: middle;
+            font-size: 0;
+        }
+        #inp-query{
+            display: inline-block;
+            width: 480px;
+            height: 30px;
+            padding-left: 10px;
+            background: url("http://img3.doubanio.com/dae/accounts/resources/19507ad/movie/assets/nav_mv_bg.png?s=1")
+                        no-repeat 2px -2px;
+            font-size: 13px;
+            border: 0 solid transparent;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        #inp-submit{
+            display: inline-block;
+            background: url("http://img3.doubanio.com/dae/accounts/resources/19507ad/movie/assets/nav_mv_bg.png?s=1")
+                        no-repeat 0 -40px;
+            width: 34px;
+            height: 30px;
+            color: transparent;
+            cursor: pointer;
+            border: 0px solid transparent;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        /*第二行菜单*/
+        .nav-secondary li{
+            display: inline-block;
+            font-size: 13px;
+            line-height: 4em;
+            margin-right: 30px;
+        }
+        .nav-secondary li a{
+            color: #37a;
+        }
+        /*第二行菜单悬浮效果*/
+        .nav-secondary li a:hover{
+            background-color: #27a;
+            color: #fff;
+        }
+
+        /*正在上映模块*/
+        .nowplaying{
+            display: inline-block;
+            width: 675px;
+         }
+        .nowplaying h2{
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+            font: 16px Arial, Helvetica, sans-serif;
+            color: #072;
+        }
+        .movie-wall{
+            margin-top: 20px;
+            margin-left: -26px;
+        }
+        .movie-wall > li{
+            float: left;
+            width: 115px;
+            height: 247px;
+            margin: 0 0 32px 25px;
+            font-size: 15px;
+        }
+        .movie-poster{
+            font-size: 0;
+        }
+        .movie-poster img{
+            width: 115px;
+            height: 170px;
+        }
+        .movie-title{
+            padding-top: 15px;
+            font-size: 14px;
+            text-align: center;
+            height: 24px;
+            width: 100%;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            white-space:nowrap;
+        }
+        /*手里没有星星照片，暂且用这种方法写吧*/
+        .movie-starting{
+             text-align: center;
+             font-size: 12px;
+         }
+        /*评价零星*/
+        .movie-starting0::before{
+            content: "";
+            color: orangered;
+        }
+        .movie-starting0::after{
+            content: "☆☆☆☆☆";
+            color: gray;
+        }
+        /*评价一星*/
+        .movie-starting1::before{
+            content: "★";
+            color: orangered;
+        }
+        .movie-starting1::after{
+            content: "☆☆☆☆";
+            color: gray;
+        }
+        /*评价二星*/
+        .movie-starting2::before{
+            content: "★★";
+            color: orangered;
+        }
+        .movie-starting2::after{
+            content: "☆☆☆";
+            color: gray;
+        }
+        /*评价三星*/
+        .movie-starting3::before{
+            content: "★★★";
+            color: orangered;
+        }
+        .movie-starting3::after{
+            content: "☆☆";
+            color: gray;
+        }
+        /*评价四星*/
+        .movie-starting4::before{
+            content: "★★★★";
+            color: orangered;
+        }
+        .movie-starting4::after{
+            content: "☆";
+            color: gray;
+        }
+        /*评价五星*/
+        .movie-starting5::before{
+            content: "★★★★★";
+            color: orangered;
+        }
+        .movie-starting5::after{
+            content: "";
+            color: gray;
+        }
+        /*选座购票按钮*/
+        .movie-btn a{
+            display: block;
+            width: 83px;
+            height: 24px;
+            margin: 0 auto;
+            text-align: center;
+            background-color :#F3F3F3;
+            border: 1px solid #d9d9d9;
+        }
+    </style>
+</head>
+<body>
+<!--头部导航菜单-->
+<div class="nav">
+    <div class="nav-wrap">
+        <div class="nav-primary">
+            <a href="" class="nav-logo">MovieSizer</a>
+            <form action="/search" class="nav-search">
+                <input type="text" id="inp-query" name="search-text" size="22" maxlength="60" placeholder="搜索影片、演员、导演等">
+                <input type="submit" id="inp-submit">
+            </form>
+        </div>
+        <ul class="nav-secondary">
+            <li><a href="">选电影</a></li>
+            <li><a href="">排行榜</a></li>
+            <li><a href="">分类</a></li>
+            <li><a href="">影评</a></li>
+            <li><a href="">2017排行榜</a></li>
+            <li><a href="">2017观影指南</a></li>
+        </ul>
+    </div>
+</div>
+<!--正在上映模块-->
+<div class="wrap">
+    <div class="nowplaying">
+        <h2>正在上映</h2>
+        <ul class="movie-wall clearfix">
+            <li>
+                <ul>
+                    <li class="movie-poster"><a href=""><img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2541280047.webp" alt=""></a></li>
+                    <li class="movie-title"><a href="">海王</a></li>
+                    <li class="movie-starting movie-starting4"></li>
+                    <li class="movie-btn"><a href="">选座购票</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li class="movie-poster"><a href=""><img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2539661066.webp" alt=""></a></li>
+                    <li class="movie-title"><a href="">无名之辈</a></li>
+                    <li class="movie-starting movie-starting4"></li>
+                    <li class="movie-btn"><a href="">选座购票</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li class="movie-poster"><a href=""><img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2540513831.webp" alt=""></a></li>
+                    <li class="movie-title"><a href="">狗十三</a></li>
+                    <li class="movie-starting movie-starting4"></li>
+                    <li class="movie-btn"><a href="">选座购票</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li class="movie-poster"><a href=""><img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2537158013.webp" alt=""></a></li>
+                    <li class="movie-title"><a href="">毒液:致命守护者</a></li>
+                    <li class="movie-starting movie-starting4"></li>
+                    <li class="movie-btn"><a href="">选座购票</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li class="movie-poster"><a href=""><img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2541197052.webp" alt=""></a></li>
+                    <li class="movie-title"><a href="">惊涛骇浪</a></li>
+                    <li class="movie-starting movie-starting4"></li>
+                    <li class="movie-btn"><a href="">选座购票</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li class="movie-poster"><a href=""><img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2538352472.webp" alt=""></a></li>
+                    <li class="movie-title"><a href="">憨豆特工3</a></li>
+                    <li class="movie-starting movie-starting4"></li>
+                    <li class="movie-btn"><a href="">选座购票</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li class="movie-poster"><a href=""><img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2537667301.webp" alt=""></a></li>
+                    <li class="movie-title"><a href="">无敌破坏王2:大闹互联网</a></li>
+                    <li class="movie-starting movie-starting4"></li>
+                    <li class="movie-btn"><a href="">选座购票</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li class="movie-poster"><a href=""><img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2539424621.webp" alt=""></a></li>
+                    <li class="movie-title"><a href="">动物物语:格林沃森之罪</a></li>
+                    <li class="movie-starting movie-starting4"></li>
+                    <li class="movie-btn"><a href="">选座购票</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li class="movie-poster"><a href=""><img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2540039582.webp" alt=""></a></li>
+                    <li class="movie-title"><a href="">恐怖快递</a></li>
+                    <li class="movie-starting movie-starting4"></li>
+                    <li class="movie-btn"><a href="">选座购票</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li class="movie-poster"><a href=""><img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2541125720.webp" alt=""></a></li>
+                    <li class="movie-title"><a href="">一百年很长吗</a></li>
+                    <li class="movie-starting movie-starting4"></li>
+                    <li class="movie-btn"><a href="">选座购票</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

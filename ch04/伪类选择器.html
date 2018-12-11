@@ -1,0 +1,63 @@
+<!--
+  Created by JetBrains WebStorm.
+  User: Sizer
+-->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <style type="text/css">
+        div{
+            width: 200px;
+            height: 200px;
+        }
+        .box1{
+            background-color: blue;
+        }
+        .box2{
+            background-color: red;
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        .box1:hover + .box2{
+            background-color: yellow;
+        }
+        .box1:hover + .box2 > .box3{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<!--
+    伪类大多是以选择器为依托来表现的(:)
+        伪类选择器，也是一个选择器，跟普通选择器不同的是，它需要元素满足某些特殊条件的时候才能选择到元素，类似于给选择器加了一个开关
+    伪类选择器的触发条件：
+        1、 元素未被点击是
+            a:link{color: red;}
+        2、 鼠标在元素上悬停时
+            a:hover{color:red;}
+        3、 鼠标在元素上按下时
+            a:active{color:red;}
+        4、 元素被点击过后
+            a:visited{color:red;}
+    :hover 和 :active伪类可以不止适用于a标签
+    伪类选择器改变其他元素属性时需满足的关系
+        被操控元素得是开关元素的同级或后代  即 不能通过开关元素找到其父级
+        也控制不了开关元素的父标签的子标签
+        包含: div:hover p{width:100px;}
+        并列  div:hover+p{width:100px;}
+
+-->
+
+<div class="box1"></div>
+<div class="box2">
+    <div class="box3"></div>
+</div>
+</body>
+</html>
